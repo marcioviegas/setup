@@ -21,14 +21,16 @@
 	"intellij-idea-eap",
 	"virtualbox",
 	"vagrant",
+	"sizeup",
+	"hyperswitch",
     ],
     "dependencies": {
         "mit-scheme": "casks/xquartz"
     },
     "formulas": [
         "bash",
-        "caskroom/cask/brew-cask",
         "git",
+	"brew-cask",
         "tmux",
         "wget",
         "xctool",
