@@ -22,7 +22,7 @@
 	"virtualbox",
 	"vagrant",
 	"sizeup",
-	"hyperswitch",
+	"hyperswitch"
     ],
     "dependencies": {
         "mit-scheme": "casks/xquartz"
@@ -38,7 +38,7 @@
 	"zsh-completions",
 	"docker",
 	"vim",
-	"macvim --env-std --overwrite-system-vi",
+	"macvim --env-std --overwrite-system-vi"
     ],
     "icons": {
         "HipChat": "~/Dropbox/Images/Icons/HipChat.icns",
