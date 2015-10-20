@@ -1,0 +1,34 @@
+{
+    "NSGlobalDomain": {
+        "ApplePressAndHoldEnabled": false,
+        "NSScrollAnimationEnabled": false
+    },
+    "com.apple.Safari": {
+        "FindOnPageMatchesWordStartsOnly": false
+    },
+    "com.apple.Terminal": {
+        "AppleShowScrollbars": "WhenScrolling"
+    },
+    "com.apple.desktopservices": {
+        "DSDontWriteNetworkStores": true
+    },
+    "com.apple.dock": {
+        "expose-animation-duration": 0.15,
+        "show-process-indicators": false,
+        "tilesize": 48
+    },
+    "com.apple.finder": {
+        "FK_AppCentricViewStyle": "clmv",
+        "FXArrangeGroupViewBy": "Name",
+        "FXDefaultSearchScope": "SCcf",
+        "FXPreferredGroupBy": "Name",
+        "FXPreferredViewStyle": "Nlsv",
+        "QuitMenuItem": true
+    },
+    "com.flexibits.fantastical.plist": {
+        "StatusItemStyle": 0
+    },
+    "com.iconfactor.mac.xScope": {
+        "generalShowDockIcon": false
+    }
+}

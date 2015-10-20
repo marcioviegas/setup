@@ -1,0 +1,23 @@
+# vim:ft=sh
+
+alias battery="pmset -g ps"
+alias cdesrc='cd ~/Documents/src/etc'
+alias cdisrc='cd ~/Documents/src/instacart'
+alias cdmsrc='cd ~/Documents/src/msanders'
+alias cdsrc='cd ~/Documents/src'
+alias cman="man -S2:3"
+alias hide="chflags hidden"
+alias irb='irb --readline -r irb/completion'
+alias lock="sudo chflags uchg"
+alias sizeof="du -sh"
+alias suspend="/System/Library/CoreServices/Menu Extras/User.menu/Contents/Resources/CGSession -suspend"
+alias targz="tar zxvf"
+alias tmp="cd ~/.tmp"
+alias unhide="chflags nohidden"
+alias unlock="sudo chflags nouchg"
+alias vim='gvim -v'
+alias webconsole='bundle exec foreman run rails console'
+alias webstart='sh -c "open -a postgres && bundle exec foreman run rails server -b 0.0.0.0"'
+alias webupdate='sh -c "git reup && bundle install && open -a postgres && bundle exec rake db:migrate"'
+alias whatismyip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias xcodesucks='rm -rf ~/Library/Developer/Xcode/DerivedData'

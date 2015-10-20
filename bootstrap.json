@@ -1,0 +1,54 @@
+{
+    "after-scripts": [
+        "./scripts/update_ruby.sh",
+        "./scripts/keybindings/install.sh",
+        "'./scripts/Terminal Launcher/install.sh'",
+        "cd ./scripts/swift && ./install",
+        "./scripts/vim_setup.sh",
+        "brew linkapps"
+    ],
+    "casks": [
+        "dropbox",
+        "google-chrome",
+        "google-hangouts",
+        "hipchat",
+        "iterm2",
+    	"caffeine",
+	"1password-beta",
+	"java",
+        "spotify",
+        "steam",
+	"intellij-idea-eap",
+	"virtualbox",
+	"vagrant",
+    ],
+    "dependencies": {
+        "mit-scheme": "casks/xquartz"
+    },
+    "formulas": [
+        "bash",
+        "caskroom/cask/brew-cask",
+        "git",
+        "tmux",
+        "wget",
+        "xctool",
+	"zsh",
+	"zsh-completions",
+	"docker",
+	"vim",
+	"macvim --env-std --overwrite-system-vi",
+    ],
+    "icons": {
+        "HipChat": "~/Dropbox/Images/Icons/HipChat.icns",
+        "Steam": "~/Dropbox/Images/Icons/Steam.icns"
+    },
+    "symlinks": {
+        "bash/.*": "~",
+        "bin/*": "~/bin/",
+        "git/.*": "~",
+        "sh/.*": "~",
+        "vim/.*": "~",
+        "zsh/.zsh-functions/*": "~/.zsh-functions/",
+        "zsh/.zshrc": "~"
+    }
+}

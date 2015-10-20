@@ -1,0 +1,38 @@
+[user]
+	name = Michael Sanders
+	email = michael@msanders.com
+[core]
+    editor = vim
+	whitespace = trailing-space,space-before-tab
+	excludesfile = ~/.gitignore
+	pull = pull --ff-only
+[alias]
+    up = "!git remote update -p; git merge --ff-only @{u}"
+[alias]
+    reup = !/usr/local/bin/git-reup
+[mergetool]
+	keepBackup = false
+	prompt = false
+[push]
+	default = tracking
+[credential]
+	helper = osxkeychain
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[merge]
+	tool = chdiff
+[diff]
+	tool = chdiff
+[difftool]
+	prompt = false
+[difftool "chdiff"]
+    cmd = chdiff "$LOCAL" "$REMOTE"
+	trustExitCode = true
+[mergetool "chdiff"]
+    cmd = chdiff "$LOCAL" "$REMOTE"
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
