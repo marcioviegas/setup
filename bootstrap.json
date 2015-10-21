@@ -1,28 +1,29 @@
 {
     "after-scripts": [
-        "./scripts/update_ruby.sh",
         "./scripts/keybindings/install.sh",
+        "./scripts/oh-my-zsh.sh",
         "'./scripts/Terminal Launcher/install.sh'",
         "cd ./scripts/swift && ./install",
         "./scripts/vim_setup.sh",
         "brew linkapps"
     ],
-    "casks": [
+        "casks": [
         "dropbox",
+        "intellij-idea",
         "google-chrome",
         "google-hangouts",
         "hipchat",
         "iterm2",
-    	"caffeine",
-	"1password-beta",
-	"java",
+        "caffeine",
+        "macvim --overwrite-system-vi",
+	    "1password",
+	    "java",
         "spotify",
         "steam",
-	"intellij-idea-eap",
-	"virtualbox",
-	"vagrant",
-	"sizeup",
-	"hyperswitch"
+	    "virtualbox",
+	    "vagrant",
+	    "sizeup",
+	    "hyperswitch"
     ],
     "dependencies": {
         "mit-scheme": "casks/xquartz"
@@ -30,20 +31,14 @@
     "formulas": [
         "bash",
         "git",
-	"brew-cask",
+        "brew-cask",
         "tmux",
+        "thefuck",
         "wget",
         "xctool",
-	"zsh",
-	"zsh-completions",
-	"docker",
-	"vim",
-	"macvim --env-std --overwrite-system-vi"
+        "docker",
+	    "macvim --env-std --overwrite-system-vi"
     ],
-    "icons": {
-        "HipChat": "~/Dropbox/Images/Icons/HipChat.icns",
-        "Steam": "~/Dropbox/Images/Icons/Steam.icns"
-    },
     "symlinks": {
         "bash/.*": "~",
         "bin/*": "~/bin/",
@@ -51,6 +46,7 @@
         "sh/.*": "~",
         "vim/.*": "~",
         "zsh/.zsh-functions/*": "~/.zsh-functions/",
-        "zsh/.zshrc": "~"
+        "zsh/.zshrc": "~",
+        "xvim/.*": "~"
     }
 }
