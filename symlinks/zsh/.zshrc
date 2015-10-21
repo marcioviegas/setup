@@ -1,105 +1,84 @@
-PATH=$HOME/bin:/usr/local/bin:/Developer/usr/bin:$PATH
-PS1="%2c$PR_NO_COLOR%(!.#.$) " # Nice, unobtrusive prompt.
-fpath=(~/.zsh-functions $fpath) # Load my completion functions.
-
-export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
-export EDITOR=vim
-export PYTHONSTARTUP=$HOME/.pyrc
-
-# -- Intelligent completion --
-autoload -Uz compinit; compinit
-zstyle ':completion:*' file-patterns '%p:globbed-files:'
-zstyle ':completion:*' completer _expand _complete _ignored
-zstyle ':completion:*' expand prefix suffix
-zstyle ':completion:*' file-sort name
-zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}'
-zstyle ':completion:*' squeeze-slashes true
-zstyle :compinstall filename '/home/michael/.zshrc'
-
-setopt AUTOCD # Automatically cd if command is directory name.
-setopt NOMATCH # If glob shows no matches, tell me.
-setopt INTERACTIVECOMMENTS # Allow comments like this in shell.
-setopt MENU_COMPLETE # Display menu for ambiguous completions.
-setopt BEEP # Beep.
-
-unsetopt LIST_BEEP # Don't beep when listing a menu.
-unsetopt CASE_GLOB # Ignore case in completions.
-unsetopt EXTENDED_GLOB # Do not treat #, ^ and ~ as parts of patterns.
-
-# Fix escape sequence for screen so that it adds the name of the current
-# process to the title.
-if [[ ${TERM} == screen ]]; then
-	precmd() { print -Pn "\033k\033\134\033k\033\134" }
-fi
-
-# -- Colors! --
-export CLICOLOR=1
-export LANG=C # Make grep faster
-export GREP_OPTIONS='--color=auto'
-export LSCOLORS=cxfxexexexegedabagcxcx
-
-# -- History --
-export HISTFILE=$HOME/.zsh_history
-export HISTSIZE=10000 # Lines to save in memory
-export SAVEHIST=10000 # Lines to save on disk
-
-# Append to history on-the-fly (not just on exit).
-setopt APPENDHISTORY INC_APPEND_HISTORY
-
-# Ignore duplicates in history, damnit!
-setopt HIST_FIND_NO_DUPS HIST_SAVE_NO_DUPS HIST_REDUCE_BLANKS HIST_IGNORE_ALL_DUPS 
-
-# Don't log commands beginning with a space.
-setopt HIST_IGNORE_SPACE
-
-# -- Keybindings --
-
-# Enable vi mode.
-bindkey -v
-bindkey -M viins 'jj' vi-cmd-mode
-
-# Add some convenient emacs-like shortcuts too.
-bindkey "" beginning-of-line
-bindkey "" end-of-line
-bindkey "" backward-char
-bindkey "" forward-char
-bindkey "" backward-word
-bindkey "" forward-word
-bindkey "" kill-line
-bindkey "" history-incremental-search-backward
-
-bindkey '^[[Z' reverse-menu-complete # Shift-tab to go back an item in menu.
-bindkey " " magic-space # Expand variables such as !$ when space is pressed.
-
-# alias -s -- jar='java -jar' # Automatically open .jar files with Java.
-
-# Search history using  & .
-bindkey "" history-beginning-search-backward
-bindkey "" history-beginning-search-forward
-
-# Press v in vi mode to edit line in $EDITOR.
-autoload -U edit-command-line
-zle -N edit-command-line
-bindkey -M vicmd v edit-command-line
-
-# Load my aliases.
-if [[ -f $HOME/.aliases ]]; then
-	source $HOME/.aliases
-fi
-
-function zle-line-init zle-keymap-select {
-  zle reset-prompt
-}
-
-zle -N zle-line-init
-zle -N zle-keymap-select
-
-# added by travis gem
-[ -f /Users/msanders/.travis/travis.sh ] && source /Users/msanders/.travis/travis.sh
-
-# Rbenv
-export RBENV_ROOT=/usr/local/var/rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-# added by travis gem
-[ -f /Users/mks/.travis/travis.sh ] && source /Users/mks/.travis/travis.sh
+# Path to your oh-my-zsh installation.
+export ZSH=$HOME/.oh-my-zsh
+#
+# # Set name of the theme to load.
+# # Look in ~/.oh-my-zsh/themes/
+# # Optionally, if you set this to "random", it'll load a random theme each
+# # time that oh-my-zsh is loaded.
+ZSH_THEME="avit"
+#
+# # Uncomment the following line to use case-sensitive completion.
+# # CASE_SENSITIVE="true"
+#
+# # Uncomment the following line to use hyphen-insensitive completion. Case
+# # sensitive completion must be off. _ and - will be interchangeable.
+# # HYPHEN_INSENSITIVE="true"
+#
+# # Uncomment the following line to disable bi-weekly auto-update checks.
+# # DISABLE_AUTO_UPDATE="true"
+#
+# # Uncomment the following line to change how often to auto-update (in days).
+# # export UPDATE_ZSH_DAYS=13
+#
+# # Uncomment the following line to disable colors in ls.
+# # DISABLE_LS_COLORS="true"
+#
+# # Uncomment the following line to disable auto-setting terminal title.
+# # DISABLE_AUTO_TITLE="true"
+#
+# # Uncomment the following line to enable command auto-correction.
+# # ENABLE_CORRECTION="true"
+#
+# # Uncomment the following line to display red dots whilst waiting for completion.
+# # COMPLETION_WAITING_DOTS="true"
+#
+# # Uncomment the following line if you want to disable marking untracked files
+# # under VCS as dirty. This makes repository status check for large repositories
+# # much, much faster.
+# # DISABLE_UNTRACKED_FILES_DIRTY="true"
+#
+# # Uncomment the following line if you want to change the command execution time
+# # stamp shown in the history command output.
+# # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# # HIST_STAMPS="mm/dd/yyyy"
+#
+# # Would you like to use another custom folder than $ZSH/custom?
+# # ZSH_CUSTOM=/path/to/new-custom-folder
+#
+# # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# # Example format: plugins=(rails git textmate ruby lighthouse)
+# # Add wisely, as too many plugins slow down shell startup.
+# plugins=(git)
+#
+# # User configuration
+#
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# # export MANPATH="/usr/local/man:$MANPATH"
+#
+# source $ZSH/oh-my-zsh.sh
+#
+# # You may need to manually set your language environment
+# # export LANG=en_US.UTF-8
+#
+# # Preferred editor for local and remote sessions
+# # if [[ -n $SSH_CONNECTION ]]; then
+# #   export EDITOR='vim'
+# # else
+# #   export EDITOR='mvim'
+# # fi
+#
+# # Compilation flags
+# # export ARCHFLAGS="-arch x86_64"
+#
+# # ssh
+# # export SSH_KEY_PATH="~/.ssh/dsa_id"
+#
+# # Set personal aliases, overriding those provided by oh-my-zsh libs,
+# # plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# # users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# # For a full list of active aliases, run `alias`.
+# #
+# # Example aliases
+# # alias zshconfig="mate ~/.zshrc"
+# # alias ohmyzsh="mate ~/.oh-my-zsh"
