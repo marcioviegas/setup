@@ -20,4 +20,7 @@ vim +PluginInstall +qall
 cd "$HOME/.vim/bundle/command-t/ruby/command-t"
 ruby extconf.rb >/dev/null
 make >/dev/null
-mkdir $HOME/temp
+
+if [ ! -d "$HOME/temp" ]; then
+    mkdir $HOME/temp
+fi

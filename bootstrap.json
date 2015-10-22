@@ -1,13 +1,14 @@
 {
     "after-scripts": [
         "./scripts/keybindings/install.sh",
-        "./scripts/oh-my-zsh.sh",
         "'./scripts/Terminal Launcher/install.sh'",
         "cd ./scripts/swift && ./install",
         "./scripts/vim_setup.sh",
+        "./scripts/oh-my-zsh.sh",
+        "./scripts/move-my-zsh.sh",
         "brew linkapps"
     ],
-        "casks": [
+    "casks": [
         "dropbox",
         "intellij-idea",
         "google-chrome",
@@ -16,14 +17,14 @@
         "iterm2",
         "caffeine",
         "macvim --overwrite-system-vi",
-	    "1password",
-	    "java",
+	      "1password",
+	      "java",
         "spotify",
         "steam",
-	    "virtualbox",
-	    "vagrant",
-	    "sizeup",
-	    "hyperswitch"
+	      "virtualbox",
+	      "vagrant",
+	      "sizeup",
+	      "hyperswitch"
     ],
     "dependencies": {
         "mit-scheme": "casks/xquartz"
