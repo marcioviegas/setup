@@ -6,6 +6,7 @@
         "./scripts/vim_setup.sh",
         "./scripts/oh-my-zsh.sh",
         "./scripts/osx-for-hackers.sh",
+        "./scripts/update_ruby.sh",
         "brew linkapps"
     ],
     "casks": [
@@ -38,6 +39,7 @@
         "thefuck",
         "wget",
         "xctool",
+        "rbenv",
         "docker",
 	    "macvim --env-std --overwrite-system-vi"
     ],
