@@ -14,11 +14,6 @@ export PATH="/usr/local/sbin:$PATH"
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 
-# Make bash check its window size after a process completes
-shopt -s checkwinsize
-
-PS1='\u:\W$ '
-
 export PATH="$HOME/bin:$PATH"
 export EDITOR=vim
 
@@ -33,7 +28,6 @@ export LSCOLORS=cxfxexexexegedabagcxcx
 # History
 export HISTCONTROL=erasedups,ignorespace
 export HISTSIZE=1000
-shopt -s histappend
 
 # Rbenv
 export RBENV_ROOT=/usr/local/var/rbenv

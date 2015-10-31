@@ -12,6 +12,7 @@
     "casks": [
         "dropbox",
         "intellij-idea",
+        "java7",
         "google-chrome",
         "google-hangouts",
         "hipchat",
@@ -38,6 +39,7 @@
         "maven",
         "thefuck",
         "wget",
+        "jenv",
         "xctool",
         "rbenv",
         "docker",
