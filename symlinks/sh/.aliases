@@ -4,8 +4,6 @@ alias killvms="vagrant global-status | grep virtualbox | cut -c 1-9 | while read
 alias recipe="bundle exec kitchen create"
 alias cook="bundle exec kitchen converge"
 alias burn="bundle exec kitchen destroy"
-
-https://svn.dev.lan.com/repos/LanLibDisplayAncillaryLowestPriceHotelClient
-https://svn.dev.lan.com/repos/LanApiAncillaryGroundServices
-https://svn.dev.lan.com/repos/LatamApiAncillarySeatSales
-https://svn.dev.lan.com/repos/LanWsDisplayAncillaryLowestPriceHotel
+alias seatmap="cd Projects/LATAM/Ancilliary/LatamApiSeatMap"
+alias home="cd ~"
+alias m="make"

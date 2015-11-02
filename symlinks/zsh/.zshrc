@@ -54,7 +54,7 @@ plugins=(git)
 # User configuration
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-# export MANPATH="/usr/local/man:$MANPATH"
+export PATH="$HOME/.jenv/bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -82,6 +82,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+source ~/.aliases
+source ~/.bash_profile
+
+# Other configurations
 TF_ALIAS=fuck alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
-export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
